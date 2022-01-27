@@ -8,10 +8,11 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/im_icfb"
-        android:layout_width="200sp"
-        android:layout_height="200sp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:adjustViewBounds="true"
         android:src="@drawable/icfb"
         android:visibility="visible"
@@ -27,7 +28,7 @@
         android:layout_marginHorizontal="20dp"
         android:background="@drawable/oval"
         android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="10sp"
+        android:drawablePadding="10dp"
         android:hint="@string/email"
         android:padding="15dp"
         android:textColorHint="@color/white"
@@ -42,13 +43,13 @@
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20sp"
-        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/oval"
         android:drawableStart="@drawable/ic_lock"
         android:drawablePadding="10dp"
         android:hint="@string/password"
-        android:padding="15sp"
+        android:padding="15dp"
         android:textColorHint="@color/white"
         android:textSize="20sp"
         android:textStyle="normal"
@@ -59,9 +60,9 @@
         android:id="@+id/checkbox_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
+        android:layout_margin="10dp"
         android:checked="true"
-        android:padding="10sp"
+        android:padding="10dp"
         android:text="@string/remember_me"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -73,10 +74,10 @@
         android:id="@+id/tv_forget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15sp"
+        android:layout_margin="15dp"
         android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="5sp"
-        android:padding="10sp"
+        android:drawablePadding="5dp"
+        android:padding="10dp"
         android:text="@string/forget_password"
         android:textColor="@color/white"
         android:textSize="15sp"
@@ -92,7 +93,7 @@
         android:backgroundTint="@color/white"
         android:text="@string/log_in"
         android:textColor="@color/black"
-        app:cornerRadius="35sp"
+        app:cornerRadius="35dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -102,19 +103,16 @@
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20sp"
+        android:layout_marginHorizontal="20dp"
         android:backgroundTint="#00BCD4"
         android:text="@string/sign_up"
         android:textColor="@color/white"
-        app:cornerRadius="35sp"
+        app:cornerRadius="35dp"
         app:layout_constraintLeft_toLeftOf="@id/btn_login"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_login"
         app:strokeColor="@color/white"
-        app:strokeWidth="2sp" />
-
-
-
+        app:strokeWidth="2dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
