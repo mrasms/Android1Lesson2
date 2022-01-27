@@ -5,10 +5,12 @@
       <map>
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/ic_baseline_radio_button_unchecked_24.xml" value="0.19074074074074074" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/ic_east.xml" value="0.19074074074074074" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/ic_error.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/ic_lock.xml" value="0.1" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/oval.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/drawable/white_oval.xml" value="0.19583333333333333" />
-        <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Admin/AndroidStudioProjects/Android1Lesson1/app/src/main/res/layout/activity_profile_info.xml" value="0.1" />
       </map>
     </option>
   </component>
