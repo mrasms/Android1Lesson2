@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Android1Lesson1</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="log_in">LOG IN</string>
+    <string name="forget_password">Forget password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+
+</resources>
