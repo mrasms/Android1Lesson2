@@ -57,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = etEmail.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
-                String uri = String.valueOf(uriImg);
                 Intent intent = new Intent(MainActivity.this, ProfileInfoActivity.class);
                 intent.putExtra(Constants.EMAIL, email);
                 intent.putExtra(Constants.PASSWORD, password);
