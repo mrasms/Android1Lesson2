@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -21,7 +22,6 @@ public class ProfileInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile_info);
         initialisation();
         setupData();
-
     }
 
     private void initialisation() {
@@ -34,9 +34,10 @@ public class ProfileInfoActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String nameMain = intent.getStringExtra(Constants.EMAIL);
         String passwordMain = intent.getStringExtra(Constants.PASSWORD);
-        tvUserEmail.setText(nameMain.trim());
-        tvUserPassword.setText(passwordMain.trim());
-
+        Uri uri = Uri.parse(intent.getStringExtra("uriImg"));
+        imAvatar.setImageURI(uri);
+        tvUserEmail.setText(nameMain);
+        tvUserPassword.setText(passwordMain);
     }
 
 }

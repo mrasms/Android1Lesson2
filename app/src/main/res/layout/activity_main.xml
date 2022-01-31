@@ -1,120 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_sky"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="com.example.android1lesson1.ui.main_activity.MainActivity">
 
     <ImageView
         android:id="@+id/im_icfb"
         android:layout_width="200sp"
         android:layout_height="200sp"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/icfb"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@id/et_email"
-        app:layout_constraintLeft_toLeftOf="@id/et_email"
-        app:layout_constraintRight_toRightOf="@id/et_email"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/icfb" />
 
     <EditText
         android:id="@+id/et_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/oval"
+        style="@style/EditTextTheme"
+        android:layout_marginTop="30dp"
         android:drawableStart="@drawable/ic_person"
-        android:drawablePadding="10sp"
         android:hint="@string/email"
-        android:padding="15dp"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20sp"
-        android:layout_marginTop="15sp"
-        android:background="@drawable/oval"
+        style="@style/EditTextTheme"
+        android:layout_marginTop="30dp"
         android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="10dp"
         android:hint="@string/password"
-        android:padding="15sp"
-        android:textColorHint="@color/white"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        app:layout_constraintLeft_toLeftOf="@id/et_email"
-        app:layout_constraintTop_toBottomOf="@id/et_email" />
+        android:inputType="numberPassword" />
 
     <CheckBox
-        android:id="@+id/checkbox_remember"
+        android:id="@+id/checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10sp"
-        android:checked="true"
-        android:padding="10sp"
-        android:text="@string/remember_me"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@id/btn_login"
-        app:layout_constraintLeft_toLeftOf="@id/et_password"
-        app:layout_constraintTop_toBottomOf="@id/et_password" />
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        android:text="@string/remember_me" />
 
-    <TextView
-        android:id="@+id/tv_forget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="15sp"
-        android:drawableStart="@drawable/ic_lock"
-        android:drawablePadding="5sp"
-        android:padding="10sp"
-        android:text="@string/forget_password"
-        android:textColor="@color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
-        app:layout_constraintLeft_toRightOf="@id/checkbox_remember"
-        app:layout_constraintTop_toBottomOf="@id/et_password" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="@color/white"
         android:text="@string/log_in"
         android:textColor="@color/black"
-        app:cornerRadius="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_password" />
+        app:cornerRadius="35sp" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_signup"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20sp"
-        android:backgroundTint="#00BCD4"
-        android:text="@string/sign_up"
-        android:textColor="@color/white"
-        app:cornerRadius="35sp"
-        app:layout_constraintLeft_toLeftOf="@id/btn_login"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"
-        app:strokeColor="@color/white"
-        app:strokeWidth="2sp" />
-
-
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

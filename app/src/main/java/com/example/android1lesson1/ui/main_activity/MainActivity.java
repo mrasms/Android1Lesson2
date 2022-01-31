@@ -6,7 +6,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView imIcfb;
     Button btnLogin;
     EditText etEmail, etPassword;
+    Uri uriImg;
 
 
     @Override
@@ -51,18 +51,17 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        imIcfb.buildDrawingCache();
-
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-                String email = etEmail.getText().toString();
-                String password = etPassword.getText().toString();
+                String email = etEmail.getText().toString().trim();
+                String password = etPassword.getText().toString().trim();
+                String uri = String.valueOf(uriImg);
                 Intent intent = new Intent(MainActivity.this, ProfileInfoActivity.class);
                 intent.putExtra(Constants.EMAIL, email);
                 intent.putExtra(Constants.PASSWORD, password);
+                intent.putExtra("uriImg", uriImg.toString());
                 if (email.length() == 0 || password.length() == 0) {
                     etEmail.setError("Введите Email");
                     etPassword.setError("Введите пароль");
@@ -76,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
             new ActivityResultCallback<Uri>() {
                 @Override
                 public void onActivityResult(Uri result) {
-                    imIcfb.setImageURI(result);
+                    uriImg = result;
+                    imIcfb.setImageURI(uriImg);
 
                 }
             });
