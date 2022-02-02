@@ -17,7 +17,11 @@ import com.example.android1lesson1.R;
 import com.example.android1lesson1.constants.Constants;
 import com.example.android1lesson1.ui.profile_info_activity.ProfileInfoActivity;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    private final int numberOfElements = 2;
+    ArrayList<String> infoProfile = new ArrayList<String>(numberOfElements);
     ImageView imIcfb;
     Button btnLogin;
     EditText etEmail, etPassword;
@@ -58,13 +62,15 @@ public class MainActivity extends AppCompatActivity {
                 String email = etEmail.getText().toString().trim();
                 String password = etPassword.getText().toString().trim();
                 Intent intent = new Intent(MainActivity.this, ProfileInfoActivity.class);
-                intent.putExtra(Constants.EMAIL, email);
-                intent.putExtra(Constants.PASSWORD, password);
-                intent.putExtra("uriImg", uriImg.toString());
+                intent.putStringArrayListExtra("info", infoProfile);
                 if (email.length() == 0 || password.length() == 0) {
                     etEmail.setError("Введите Email");
                     etPassword.setError("Введите пароль");
-                } else startActivity(intent);
+                } else
+                    infoProfile.add(0, email);
+                    infoProfile.add(1, password);
+                    infoProfile.add(2,uriImg.toString());
+                    startActivity(intent);
 
             }
         });

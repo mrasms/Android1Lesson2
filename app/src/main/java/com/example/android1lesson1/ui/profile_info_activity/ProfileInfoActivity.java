@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.example.android1lesson1.R;
 import com.example.android1lesson1.constants.Constants;
 
+import java.util.ArrayList;
+
 public class ProfileInfoActivity extends AppCompatActivity {
     ImageView imAvatar;
     TextView tvUserEmail, tvUserPassword;
@@ -31,12 +33,11 @@ public class ProfileInfoActivity extends AppCompatActivity {
 
     private void setupData() {
         Intent intent = getIntent();
-        String nameMain = intent.getStringExtra(Constants.EMAIL);
-        String passwordMain = intent.getStringExtra(Constants.PASSWORD);
-        Uri uri = Uri.parse(intent.getStringExtra("uriImg"));
+        ArrayList<String> info = intent.getStringArrayListExtra("info");
+        Uri uri = Uri.parse(info.get(2));
         imAvatar.setImageURI(uri);
-        tvUserEmail.setText(nameMain);
-        tvUserPassword.setText(passwordMain);
+        tvUserEmail.setText(info.get(0));
+        tvUserPassword.setText(info.get(1));
     }
 
 }
