@@ -22,6 +22,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private final int numberOfElements = 2;
     ArrayList<String> infoProfile = new ArrayList<String>(numberOfElements);
+
+
     ImageView imIcfb;
     Button btnLogin;
     EditText etEmail, etPassword;
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         setupListener();
 
     }
+
+
 
     private void initialisation() {
         imIcfb = findViewById(R.id.im_icfb);
@@ -63,19 +67,20 @@ public class MainActivity extends AppCompatActivity {
                 String password = etPassword.getText().toString().trim();
                 Intent intent = new Intent(MainActivity.this, ProfileInfoActivity.class);
                 intent.putStringArrayListExtra("info", infoProfile);
+                intent.setData(uriImg);
                 if (email.length() == 0 || password.length() == 0) {
                     etEmail.setError("Введите Email");
                     etPassword.setError("Введите пароль");
-                } else
+                } else {
                     infoProfile.add(0, email);
                     infoProfile.add(1, password);
-                    infoProfile.add(2,uriImg.toString());
+                    //infoProfile.add(2, uriImg.toString());
                     startActivity(intent);
+                }
 
             }
         });
     }
-
     ActivityResultLauncher<String> resultLauncher = registerForActivityResult(new ActivityResultContracts.GetContent(),
             new ActivityResultCallback<Uri>() {
                 @Override
@@ -85,4 +90,5 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
+
 }

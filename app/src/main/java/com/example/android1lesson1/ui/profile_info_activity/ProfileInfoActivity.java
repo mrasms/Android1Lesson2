@@ -34,8 +34,9 @@ public class ProfileInfoActivity extends AppCompatActivity {
     private void setupData() {
         Intent intent = getIntent();
         ArrayList<String> info = intent.getStringArrayListExtra("info");
-        Uri uri = Uri.parse(info.get(2));
-        imAvatar.setImageURI(uri);
+        //intent.getData();
+        //Uri uri = Uri.parse("uri");
+        imAvatar.setImageURI(intent.getData());
         tvUserEmail.setText(info.get(0));
         tvUserPassword.setText(info.get(1));
     }
